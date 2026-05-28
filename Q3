@@ -1,0 +1,35 @@
+programa {
+  funcao inicio() {
+    real salario, soma_salario = 0.0, maior_salario = 0.0, media_salario
+    inteiro filhos, soma_filhos = 0, contagem_ate_100 = 0
+    real media_filhos, percentual_ate_100
+    const inteiro total_pesquisa = 5
+
+    para(inteiro i = 1; i <= total_pesquisa; i++){
+      escreva("\nInforme o salário: R$ ")
+      leia(salario)
+      escreva("Informe o número de filhos: ")
+      leia(filhos)
+
+      soma_salario = soma_salario + salario
+      soma_filhos = soma_filhos + filhos
+
+      se (salario > maior_salario){
+        maior_salario = salario
+      }
+      se (salario <= 100.0){
+        contagem_ate_100++
+      }
+    }
+    media_salario = soma_salario / total_pesquisa
+    media_filhos = soma_filhos / total_pesquisa
+    percentual_ate_100 = (contagem_ate_100 * 100.0) / total_pesquisa
+
+    escreva("\nMédia do salário da população: R$ ", media_salario)
+    escreva("\nMédia do salário da população: R$ ", media_salario)
+    escreva("\nMédia do número de filhos: ", media_filhos)
+    escreva("\nMaior salário informado: R$ ", maior_salario)
+    escreva("\nPercentual de pessoas com salário até R$ 100,00: ", percentual_ate_100, "%")
+
+  }
+}
