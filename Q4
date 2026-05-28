@@ -1,0 +1,17 @@
+programa {
+  funcao inicio() {
+    real alturaChico = 1.50
+    real alturaZe = 1.10
+    inteiro anos = 0
+    
+    enquanto (alturaZe <= alturaChico){
+      alturaChico = alturaChico + 0.02
+      alturaZe = alturaZe + 0.03
+      anos = anos + 1
+    }
+    escreva("Serão necessários ", anos, " anos para que Zé seja maior que Chico.\n")
+    escreva("Altura final do Chico: ", alturaChico, " metros.\n")
+    escreva("Altura final do Zé: ", alturaZe, " metros.")
+    
+  }
+}
